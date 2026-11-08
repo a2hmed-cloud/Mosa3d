@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10151f">
+  <title>BlockLink — Minecraft Remote Controller</title>
+  <style>
+    :root{color-scheme:dark;--bg:#10151f;--panel:#192231;--line:#2a394d;--muted:#9aabc0;--text:#f2f6fb;--accent:#75e0ad}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#1e3540 0,transparent 38%),var(--bg);color:var(--text);font:16px system-ui,sans-serif;min-height:100vh}
+    main{max-width:850px;margin:auto;padding:28px 18px 60px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em}.cube{width:38px;height:38px;border:1px solid #5e987d;background:linear-gradient(135deg,#8ee8b5 0 33%,#3d9b70 33% 66%,#246348 66%);border-radius:9px;box-shadow:0 8px 28px #0006}
+    h1{font-size:clamp(30px,6vw,52px);line-height:1.04;margin:34px 0 12px}p{color:var(--muted);line-height:1.6}.lead{max-width:650px;font-size:17px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:26px 0}.card{background:#192231e8;border:1px solid var(--line);border-radius:18px;padding:20px}.num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.12em}.card h2{margin:9px 0;font-size:20px}.card p{font-size:14px;margin:0}
+    .notice{border:1px solid #7a6330;background:#302817;border-radius:14px;padding:15px;color:#f3d99a;font-size:14px;line-height:1.55}
+    .status{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px}.dot{width:8px;height:8px;background:#d9ad54;border-radius:50%}
+    code{background:#0d131c;border:1px solid #283649;border-radius:7px;padding:2px 6px;color:#c7f4d9}
+    footer{margin-top:36px;color:#71839a;font-size:12px}
+  </style>
+</head>
+<body>
+<main>
+  <div class="brand"><span class="cube"></span><span>BLOCKLINK</span></div>
+  <h1>One world.<br>Two screens.</h1>
+  <p class="lead">A browser-only remote controller experiment for the Minecraft page you already play. The tablet stays on the original game; the phone becomes the controller.</p>
+  <div class="status"><span class="dot"></span><span>Prototype setup — connection not active yet</span></div>
+  <section class="grid">
+    <article class="card"><div class="num">01 / TABLET</div><h2>Game bridge</h2><p>A tiny script must run in the same page as the game so it can translate remote commands into game input. This is the first compatibility test.</p></article>
+    <article class="card"><div class="num">02 / PHONE</div><h2>Touch controller</h2><p>A responsive joystick and action buttons send movement, jump, attack, place, and camera commands from the second device.</p></article>
+    <article class="card"><div class="num">03 / LINK</div><h2>Live connection</h2><p>After the same-page input test succeeds, we add a secure room-based connection between the two browser tabs.</p></article>
+  </section>
+  <div class="notice"><strong>Important:</strong> A normal website cannot inject keyboard or mouse input into another website's tab. The tablet bridge has to execute inside the game page. This prototype does not claim that remote control is working yet.</div>
+  <footer>BlockLink is an independent browser experiment. It does not modify or host the original game.</footer>
+</main>
+</body>
+</html>
